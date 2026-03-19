@@ -115,7 +115,7 @@ public class MainProgram {
         // This is used for the underlights to set it before moving 
         robot.setUnderlights(red, green, blue);
 
-        System.out.println("Starting SwiftBot dance routine...");
+        System.out.println("The swiftbot will now begin the dance.");
 
         // This part will perfrom the movement sequence for the program
         DanceController.performRobotDance(robot, binary, hex.length(), speed);
@@ -123,7 +123,7 @@ public class MainProgram {
         // Turn the lights off after the routine is complete
         robot.turnOffUnderlights();
 
-        System.out.println("Dance complete. The underlights have been turned off.");
+        System.out.println("The Dance is now complete. The underlights have been turned off.");
     }
 
     // this part will print the title of my program
@@ -133,9 +133,7 @@ private static void printHeader() {
         System.out.println("==========================================");
     }
 
-    /*
-     * Displays all the values needed before the robot starts moving
-     */
+    // This Displays all the values needed before the robot starts moving
     private static void printDanceInformation(String hex, int decimal, String binary, String octal,
                                               int speed, int red, int green, int blue) {
 
