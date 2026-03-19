@@ -11,7 +11,7 @@ public class LogFileManager {
 
     public static void writeSortedHexLog(List<String> values) {
 
-        // This will Copy the values so the original list is not changed
+        // This will Copy the values so the original list is not changed 
         List<String> sortedValues = new ArrayList<>(values);
 
         // This will Sort using the actual hexadecimal value, not alphabetical order
