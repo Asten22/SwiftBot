@@ -1,13 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
-/*
- * Task 9 - SwiftBot Dance Program
- *
- * This program scans a QR code containing up to 5 hexadecimal values.
- * Each valid value is converted manually into octal, decimal and binary.
- * These values are then used to control the SwiftBot's speed, lights and movement.
- */
+// This program scans a QR code containing up to 5 hexadecimal values
+ //Each valid value is converted manually into octal, decimal and binary
+ //These values are then used to control the SwiftBot's speed, lights and movement
+ 
 
 public class MainProgram {
 
