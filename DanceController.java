@@ -1,5 +1,9 @@
+//This class works out the dance settings such as speed, colours and movement
+
 public class DanceController {
 
+    // Speed is based on the octal value shown as digits.
+   
     public static int calculateSpeed(String octal) {
         int octalValue = stringToInt(octal);
 
@@ -14,26 +18,32 @@ public class DanceController {
         return octalValue;
     }
 
+    // Red is simply the decimal value
+     
     public static int calculateRed(int decimal) {
         return decimal;
     }
 
+   
     public static int calculateGreen(int decimal) {
         return (decimal % 80) * 3;
     }
 
+    //Blue is whichever is greater: red or green
+     
     public static int calculateBlue(int red, int green) {
         return Math.max(red, green);
     }
 
+    // This performms the robots movement based on the binary digits as 1 = move foward whereas 0 = spin
+    
     public static void performRobotDance(SwiftBotController robot, String binary, int hexLength,
-                                         int speed, int red, int green, int blue) {
+                                         int speed) {
 
         double forwardDuration = (hexLength == 1) ? 1.0 : 0.5;
         double spinDuration = 1.0;
 
-        robot.setUnderlights(red, green, blue);
-
+        // Read the binary number from right to left
         for (int i = binary.length() - 1; i >= 0; i--) {
             char bit = binary.charAt(i);
 
@@ -47,6 +57,8 @@ public class DanceController {
         }
     }
 
+    // A Simple method to convert a string of digits into an integer without parseInt
+     
     private static int stringToInt(String text) {
         int value = 0;
 
